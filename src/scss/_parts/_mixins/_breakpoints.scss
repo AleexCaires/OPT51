@@ -1,0 +1,9 @@
+
+	//@include media('mobile') { //css }
+	@mixin media($media) {
+		@if $media == 'mobile' {@media screen and (max-width: $mobileMax) {@content;} }
+		@if $media == 'tablet' { @media screen and (min-width: $tabletMin) { @content; } }
+		@if $media == 'laptop' { @media screen and (min-width: $laptopMin) { @content; } }
+		@if $media == 'desktop' { @media screen and (min-width: $desktopMin) { @content; } }
+	}
+	
