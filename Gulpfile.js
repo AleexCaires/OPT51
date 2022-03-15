@@ -277,7 +277,7 @@ function scripts(cb) {
 	.pipe(babel({
 		presets: ['@babel/preset-env']
 	}))
-	.pipe(concat('app.js'))
+	// .pipe(concat('app.js'))
 	.pipe(gulpif(argv.prod, stripDebug()))
 	.pipe(gulpif(argv.prod,minify({
 		ext:{
